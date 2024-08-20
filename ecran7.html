@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar-container">
+        <div class="sidebar-container1">
+            <div class="sidebar1"></div> <!-- ok -->
+            <div class="sidebar2">
+               <div class="side1">
+                <i class="fas fa-tachometer-alt" style="font-size: 24px; margin-right: 10px;"></i> <!-- Icône pour "Tableau de bord" -->
+                <span style="font-size: 16px;">Tableau de bord</span>
+               </div>
+
+               <a href="ecran3.html" class="side1">
+                <i class="fas fa-user-graduate"></i> <!-- Icône pour "Élève" -->
+                <span>Élèves</span>
+               </a>
+               <a href="ecran7.html" class="side1">
+                <i class="fas fa-chalkboard-teacher"></i> <!-- Icône pour "Professeur" -->
+                <span>Professeurs</span>
+               </a>
+            
+               <a href="ecran11.html" class="side1">
+                <i class="fas fa-users"></i> <!-- Icône pour "Utilisateur" -->
+                <span>Utilisateurs</span>
+               </a>
+            
+               <a href="ecran14.html" class="side1">
+                  <i class="fas fa-file-alt"></i> <!-- Icône pour "Rapport" -->
+                  <span>Rapports</span>
+               </a>
+            </div>
+            <div class="sidebar3">
+                <i class="fas fa-sign-out-alt"></i> <!-- Icône pour "Déconnexion" -->
+                <span>Déconnexion</span>
+            </div>
+        </div>
+
+        <div class="sidebar-container2">
+            <div class="eleve">
+                <div class="elevemin"><h2>Professeurs(2)</h2></div>
+                <a href="ecran8.html" class="elevemin">
+                    <h2>+ Nouveau professeur</h2>
+                </a>
+                
+            </div>
+            <div class="eleve1">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prénoms</th>
+                                <th>Matière</th>
+                                <th>Vacant</th>
+                                
+                                <th>Âge</th>
+                                <th>Téléphone</th>
+                                <th>Ville</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Kouakou</td>
+                                <td>Gregoire</td>
+                                <td>Math</td>
+                                <td>Non</td>
+                               
+                                <td>40</td>
+                                <td>0123456789</td>
+                                <td>Touba</td>
+                                <td>
+                                    <a href="ecran9.html" class="btn-link">
+                                        <button class="btn-modify">Modifier</button>
+                                    </a>
+                                    
+                                    <button class="btn-delete">Supprimer</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Atta</td>
+                                <td>Flora</td>
+                                <td>Physique</td>
+                                <td>Oui</td>
+                               
+                                <td>37</td>
+                                <td>0987654321</td>
+                                <td>Bouaké</td>
+                                <td>
+                                    <button class="btn-modify">Modifier</button>
+                                    <button class="btn-delete">Supprimer</button>
+                                </td>
+                            </tr>
+                          
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="eleve2"></div>
+        </div>
+       
+    </div>
+    <script>
+        // Sélectionner tous les boutons de suppression
+        const deleteButtons = document.querySelectorAll('.btn-delete');
+
+        // Ajouter un gestionnaire d'événement à chaque bouton
+        deleteButtons.forEach((button) => {
+            button.addEventListener('click', function() {
+                // Demander une confirmation avant de supprimer
+                const confirmation = confirm("Voulez-vous vraiment supprimer ce professeur ?");
+                
+                if (confirmation) {
+                    // Trouver la ligne du tableau correspondante
+                    const row = this.closest('tr');
+                    // Supprimer la ligne du tableau
+                    row.remove();
+                    
+                    alert("Le professeur a été supprimé avec succès.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

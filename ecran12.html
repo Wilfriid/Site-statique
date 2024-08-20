@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar-container">
+        <div class="sidebar-container1">
+            <div class="sidebar1"></div> <!-- ok -->
+            <div class="sidebar2">
+               <div class="side1">
+                <i class="fas fa-tachometer-alt" style="font-size: 24px; margin-right: 10px;"></i> <!-- Icône pour "Tableau de bord" -->
+                <span style="font-size: 16px;">Tableau de bord</span>
+               </div>
+
+               <a href="ecran3.html" class="side1">
+                <i class="fas fa-user-graduate"></i> <!-- Icône pour "Élève" -->
+                <span>Élèves</span>
+               </a>
+               <a href="ecran7.html" class="side1">
+                <i class="fas fa-chalkboard-teacher"></i> <!-- Icône pour "Professeur" -->
+                <span>Professeurs</span>
+               </a>
+            
+               <a href="ecran11.html" class="side1">
+                <i class="fas fa-users"></i> <!-- Icône pour "Utilisateur" -->
+                <span>Utilisateurs</span>
+               </a>
+            
+               <a href="ecran14.html" class="side1">
+                  <i class="fas fa-file-alt"></i> <!-- Icône pour "Rapport" -->
+                  <span>Rapports</span>
+               </a>
+            </div>
+            <div class="sidebar3">
+                <i class="fas fa-sign-out-alt"></i> <!-- Icône pour "Déconnexion" -->
+                <span>Déconnexion</span>
+            </div>
+        </div>
+
+        <div class="sidebar-container2">
+            <div class="utilisateur">
+                <div class="uti1">
+                     <i class="fas fa-arrow-left"></i> <!-- non ok -->
+                    <span>retour</span>
+                </div>
+                <div class="uti2">
+                    <div id="id_utilisateur-form-container">
+                        <h2 id="id_utilisateur-form-title">Ajouter utilisateurs</h2>
+                        <form id="id_utilisateur-form">
+                            <div class="id_utilisateur-input-group">
+                                <label for="id_utilisateur-pseudo">Pseudo</label>
+                                <input type="text" id="id_utilisateur-pseudo" name="pseudo" required>
+                            </div>
+                            <div class="id_utilisateur-input-group">
+                                <label for="id_utilisateur-password">Mot de passe</label>
+                                <input type="password" id="id_utilisateur-password" name="password" required>
+                            </div>
+                            <div class="id_utilisateur-input-group">
+                                <label for="id_utilisateur-confirm-password">Confirmer mot de passe</label>
+                                <input type="password" id="id_utilisateur-confirm-password" name="confirm-password" required>
+                            </div>
+                            <div id="id_utilisateur-button-group">
+                                <button type="reset" id="id_utilisateur-cancel-button">Annuler</button>
+                                <button type="submit" id="id_utilisateur-submit-button">Enregistrer</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+       
+    </div>
+</body>
+</html>
+
